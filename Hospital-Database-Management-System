@@ -69,10 +69,10 @@ patient_issue varchar(60)
 );
 insert into patient_history(patient_id,patient_height,patient_weight,patient_bp,patient_tempreage,patient_issue)
                             values(1,100.63,50.10,100,110,'eye'),
-					              (2,150.96,55.22,108,120,'heart'),
-					              (3,123.85,60.88,112,130,'teerth'),
-					              (4,125.56,65.85,115,140,'bone'),
-							      (5,182.72,70.44,128,150,'brain');
+				  (2,150.96,55.22,108,120,'heart'),
+			          (3,123.85,60.88,112,130,'teerth'),
+				  (4,125.56,65.85,115,140,'bone'),
+				  (5,182.72,70.44,128,150,'brain');
 select * from patient_history;
 drop table patient_history;
 truncate table patient_history;
