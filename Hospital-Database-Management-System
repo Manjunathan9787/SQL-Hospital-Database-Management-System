@@ -10,11 +10,11 @@ patient_address varchar(30),
 patient_phone varchar(15) not null
 );
 insert into patient(patient_id,patient_name,patient_age,patient_gender,patient_address,patient_phone)
-					values(1,'manju',23,'male','dharmapuri', 9345728406),
-						  (2,'prathick',22,'male','chennai', 8056158698),
-                          (3,'ezhumalai',23,'male','viluppuram',9787862491),
-                          (4,'hemalatha',23,'female','karur',8110095665),   
-					      (5,'keerthana',23,'female', 'tamilnadu', 7788994455);
+				values(1,'manju',23,'male','dharmapuri', 9345728406),
+				      (2,'prathick',22,'male','chennai', 8056158698),
+                                      (3,'ezhumalai',23,'male','viluppuram',9787862491),
+                                      (4,'hemalatha',23,'female','karur',8110095665),   
+				      (5,'keerthana',23,'female', 'tamilnadu', 7788994455);
 drop table patient;
 truncate table patient; 
 select *from patient; 
@@ -31,11 +31,12 @@ doctor_schedule varchar(60),
 doctor_phone_number varchar(70),
 doctor_staff_id int
 );
-insert into doctor values (1,'manju','heart','morning',9345728406,1),
-						 (2,'arun','eye','eving',8056158698,2),
-						 (3,'bala','teerth','night',9787862491,3),
-						 (4,'vijay','brain','morning',8110095665,4),
-						 (5,'ajith','bone','eving',7788994455,5);
+insert into doctor
+        values (1,'manju','heart','morning',9345728406,1),
+	       (2,'arun','eye','eving',8056158698,2),
+	       (3,'bala','teerth','night',9787862491,3),
+	       (4,'vijay','brain','morning',8110095665,4),
+	       (5,'ajith','bone','eving',7788994455,5);
 drop table doctor;
 truncate table doctor;
 select *from doctor;
@@ -53,7 +54,7 @@ insert into appointment(patient_id,doctor_id,appointment_date,appointment_time)
                               (2, 2, '2021-05-22', '09:20:am'),
                               (3, 3, '2022-02-06', '02:30:pm'),
                               (4, 4, '2023-09-15', '11:10:pm'),
-							  (5, 5, '2024-07-19', '07:50:am');
+			      (5, 5, '2024-07-19', '07:50:am');
 drop table appointment;
 truncate table appointment;
 select*from appointment;
@@ -90,9 +91,9 @@ staff_date date
 insert into staff_details (staff_fir_name,staff_sec_name,staff_roll,staff_salary,staff_date)
 						  values('kavi','nesh','management',25000,'2021-01-02'),
 						        ('sakthi','vel','insurance',30000,'2022-05-22'), 
-                                ('dinesh','kumar','pharmacy',33000,'2023-08-15'),
+                                                        ('dinesh','kumar','pharmacy',33000,'2023-08-15'),
 						        ('manju','nathan','casher',40000,'2024-10-17'),
-								('arun','kumar','parking',50000,'2025-05-19');
+							('arun','kumar','parking',50000,'2025-05-19');
 drop table staff_details;
 truncate table staff_details;
 select distinct *from staff_details;
@@ -107,7 +108,7 @@ admission_date date
 );
 insert into room(room_type,staff_id,admission_date)
                  values('icu',1,'2021-05-20'),
-					   ('ccu',2,'2022-09-23'),
+		       ('ccu',2,'2022-09-23'),
                        ('general',3,'2023-06-18'),
                        ('ac',4,'2019-08-30'),
                        ('general',5,'2020-01-15');                       
@@ -125,18 +126,18 @@ bill_date date,
 cost_method varchar(50)
 );
 insert into bill (patient_id, bill_name,bill_date,cost_method)
-									values(1,'manju','2021-05-05','cash'),
-									      (2,'bala','2022-08-08','phonepe'),
-										  (3,'vijay','2023-06-09', 'cash'),
-										  (4,'manju','2018-01-22','gpay'),
-										  (5,'murgan','2016-11-30','phonepe');
+                          values(1,'manju','2021-05-05','cash'),
+			        (2,'bala','2022-08-08','phonepe'),
+				(3,'vijay','2023-06-09', 'cash'),
+				(4,'manju','2018-01-22','gpay'),
+				(5,'murgan','2016-11-30','phonepe');
 select * from bill;
 drop table bill;
 select distinct *from bill;
 truncate table bill;
 
 insert into bill (patient_id, bill_name,bill_date,cost_method,total_cost)
-values (5,'manju',2015-07-15,'cash',30000);ly
+                         values (5,'manju',2015-07-15,'cash',30000);ly
 
 #alter
 alter table bill add column total_cost int ;
